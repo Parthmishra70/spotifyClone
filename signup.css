@@ -1,0 +1,77 @@
+
+/* Signup  Page*/
+.signupdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    font-size: 22px;
+    }
+    
+    .signupdiv img{
+        height: 40px;
+        
+    }
+    .wrp{
+        width: 22vw;
+        text-align: center;
+    }
+    
+    .signupform{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .signupform form{
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+    
+    }
+    
+    .signupform label{
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .signupform input{
+        padding: 12px 16px;
+        border-radius: 4px;
+        width: 250px;
+    }
+    
+    .signupform button{
+        padding: 15px;
+        border-radius: 28px;
+        margin-top: 15px;
+    }
+    
+    .other button{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    width: 250px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    footer span{
+    width: 30vw;
+    }
+    
+    .line{
+        padding: 0px 12px;
+        position: relative;
+        display: inline-block;
+        background: var(--background-base, #ffffff);
+    
+    }

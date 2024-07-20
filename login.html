@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signup.css">
 </head>
 
 <body>
@@ -25,19 +25,20 @@
                     <button>Continue with Phone number</button>
 
                 </div>
-                <form action="">
+                <form action="/login" method="post">
                     <label for="email">Email address</label>
-                    <input type="text" id="email">
+                    <input type="text" id="email" name="email">
                     <label for="password">Password</label>
-                    <input type="password" id="email">
+                    <input type="password" id="email" name="password">
                     <a href="">Use phone number instead.</a>
                     <input type="radio" >Remeber me
-                    <button>Next</button>
+                    <button type="submit">Next</button>
                 </form>
         
                     <span class="line">or</span>
         
             </div>
+
             <footer>
                 <a href=""> Already have an account? Log in here.</a>
                 <span>This site is protected by reCAPTCHA and the Google
