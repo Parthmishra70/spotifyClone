@@ -1,6 +1,6 @@
 * {
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
 }
 
 body {
@@ -11,6 +11,7 @@ body {
 .siding {
     display: flex;
     flex-direction: row;
+    
 
 }
 
@@ -20,7 +21,6 @@ nav {
     height: 100%;
     width: 23vw;
     border-radius: 2px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     list-style: none;
     /* padding: 8px 1px 0px 26px; */
     display: flex;
@@ -53,14 +53,14 @@ ul li {
 }
 
 ul li img {
-    height: 30px;
+    height: 25px;
 }
 
 
 .cont {
     background-color: #121212;
     padding: 15px;
-    height: 67vh;
+    height: 66vh;
 }
 
 .container {
@@ -143,7 +143,7 @@ ul li img {
 
 .Rcontainer {
     /* margin-left: 10px; */
-    width: 95vw;
+    /* width: 95vw; */
 
 
 }
@@ -218,14 +218,36 @@ ul li img {
     justify-content: space-between;
     flex-direction: column;
     width: 73vw;
- 
+    height: 85vh;
+
     overflow: scroll;
     overflow-x: hidden;
 
-    outline: 3px solid;
-    height: 86vh;
+    
 
 }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+
+   }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f100;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
 
 .right .liartist {
     font-size: larger;
@@ -237,23 +259,29 @@ ul li img {
     display: flex;
     justify-content: space-between;
     padding-bottom: 30px;
+
 }
 
 .artist {
-    height: 35vh;
+    /* height: 77vh; */
+
     display: flex;
     flex-direction: row;
-    /* padding-right: 20px; */
+    gap: 10px;
+    font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif);
 
 }
 
 .artistcard {
-    height: 240px;
-    width: 142px;
-    padding-top: 25px;
-    padding: 10px;
+    height: 200px;
+    width: 134px;
+    /* padding-top: 25px; */
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+
     display: flex;
-    outline: 2px solid;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
@@ -262,49 +290,136 @@ ul li img {
 .artistcard:hover {
     background-color: rgba(240, 248, 255, 0.151);
     /* opacity: 2; */
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .artistcard img {
     border-radius: 150%;
-    height: 145px;
-    width: 140px;
+    height: 138px;
+    width: 133px;
 }
 
 
-.albumscard{
-        /* height: 167px; */
-        width: 200px;
-        padding: 10px;
-        display: flex;
-        /* outline: 2px solid; */
-        justify-content: center;
-        flex-direction: column;
-        gap: 20px;
-}
 
-.namealbums {
+.nameartist {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    gap: 1px;
 }
 
-
-.namealbums span {
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.namealbums p {
+.nameartist p {
+    display: flex;
+    align-items: center;
     margin: 0px;
     font-size: small;
-    color: #686666;
-    font-weight: 500;
+    color: #423e3e;
 }
 
-.albums img {
+/* Second ,Third  Section */
+
+.albumoption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    padding-top: 40px;
+}
+
+.option_album {
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    font-weight: 800;
+}
+
+.albumcard {
+    height: 200px;
+    width: 134px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.namealbum {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.namealbum p {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    font-size: 12px;
+    color: #423e3e;
+    word-wrap: break-word;
+}
+
+.albumcard:hover {
+    background-color: rgba(240, 248, 255, 0.151);
+    /* opacity: 2; */
     border-radius: 10px;
-    outline: 3px solid;
-    height: 160px;
-    width: 156px;
+}
+
+/* footer */
+
+footer {
+    margin-top: 90px;
+    margin-bottom: 60px;
+}
+
+.grid_cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .foo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .foo span {
+    font-weight: 600;
+}
+
+footer .foo a {
+    color: #b4b2b2;
+    text-decoration: none;
+}
+
+.foolinks {
+    padding-left: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.foolinks div {
+    height: 39px;
+    width: 39px;
+    border-radius: 30px;
+    background-color: rgba(37, 39, 39, 0.37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    outline: 1px solid rgba(231, 238, 238, 0.37);
+}
+
+.footer_spotify {
+    margin-top: 100px;
+    margin-bottom: 40px;
+
 }
