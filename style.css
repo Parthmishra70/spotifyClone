@@ -93,12 +93,14 @@ ul li img {
     border-radius: 10px;
     margin-top: 20px;
     background-color: #1f1f1f;
+    text-wrap: 30px;
 
 
 }
 
 .card p {
     font-size: 13px;
+    
 }
 
 .card button {
@@ -183,7 +185,7 @@ ul li img {
 .bar {
     display: flex;
     list-style: none;
-    margin-left: 1px;
+    /* margin-left: 1px; */
     height: 45px;
     padding: 5px 30px 5px 30px;
     justify-content: space-between;
