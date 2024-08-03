@@ -5,27 +5,32 @@
 
 body {
     background-color: black;
+    overflow: hidden;
+
+}
+
+.coverplay {
+    display: flex;
+    flex-direction: column;
 }
 
 /* siding */
 .siding {
     display: flex;
     flex-direction: row;
-    
+    height: 100%;
+    width: 101%;
 
 }
 
 /* Navigation bar */
 
 nav {
-    height: 100%;
-    width: 23vw;
+    height: 98vh;
+    min-width: 23vw;
     border-radius: 2px;
     list-style: none;
-    /* padding: 8px 1px 0px 26px; */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
 
 }
 
@@ -60,7 +65,7 @@ ul li img {
 .cont {
     background-color: #121212;
     padding: 15px;
-    height: 69vh;
+    height: 89vh;
 }
 
 .container {
@@ -84,8 +89,8 @@ ul li img {
 
 
 .card {
-    height: 15vh;
-    max-width: 28vw;
+    min-height: 15vh;
+    max-width: 29vw;
     font-size: 16px;
     font-weight: 700;
     outline: 2px solid black;
@@ -100,7 +105,7 @@ ul li img {
 
 .card p {
     font-size: 13px;
-    
+
 }
 
 .card button {
@@ -112,6 +117,23 @@ ul li img {
     border: none;
 }
 
+.playcard {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(0, 255, 0);
+    /* top: 50%; Center vertically */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.playcard img {
+    height: 25px !important;
+    width: 23px !important;
+
+}
 
 
 .grids_main {
@@ -123,8 +145,93 @@ ul li img {
     padding: 20px;
 }
 
+@media only screen and (max-width: 996px) {
+    .grids_main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media only screen and (max-width: 732px) {
+    .grids_main {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+@media only screen and (max-width: 783px) {
+    .player {
+        margin-left: 10px !important;
+    }
+
+}
+
+
+@media only screen and (max-width: 637px) {
+
+    .controls {
+        width: 110px;
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width: 759px) {
+    .player {
+        margin-left: 0px !important;
+    }
+
+}
+
+@media only screen and (max-width: 638px) {
+    nav {
+
+        position: absolute;
+        min-width: 26%; 
+        left: -100%;
+        transition: all 1s 1s ease-out;
+    z-index: 1;
+  }
+
+    .bar {
+
+        width: 84vw !important;
+    }
+
+
+    .player {
+        width: 91% !important;
+        margin-left: 11px !important;
+
+
+    }
+    .artistcard {
+     position: none;
+    }
+}
+
+
+@media only screen and (max-width: 439px) {
+
+.player {
+    height: 11% !important;
+    width: 87% !important;
+}
+
+.progress-bar {
+        width: calc(100% - 12%) !important;
+    bottom: 33px !important;
+
+}
+.audioControls img{
+    height: 20px;
+}
+
+}
+
 .grids_place a {
-    padding: 0px;
+    padding: 10px;
 
 }
 
@@ -144,39 +251,41 @@ ul li img {
 
 /* Bar */
 
+
+
 .Rcontainer {
 
-    width: 77vw;
-    height: 97vh;
+    width: 98vw;
+    height: 98vh;
 
     overflow: scroll;
     overflow-x: hidden;
 
     background-color: #1d1d1d;
     margin-left: 7px;
-
+    /* position: relative; */
 
 }
 
- /* width */
- ::-webkit-scrollbar {
+/* width */
+::-webkit-scrollbar {
     width: 16px;
     border-radius: 30px;
 
 }
- 
+
 
 ::-webkit-scrollbar-thumb {
     background: #3131312d;
 }
 
-.Rcontainer::-webkit-scrollbar-thumb{
+.Rcontainer::-webkit-scrollbar-thumb {
 
-        background: #31313186;
-    
+    background: #31313186;
+
 }
 
-::-webkit-scrollbar-thumb:hover {   
+::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
@@ -192,7 +301,7 @@ ul li img {
     margin-bottom: 1px;
     background: #101010;
     /* border-radius: 10px; */
-    width: 71vw;
+    width: 69vw;
 
 }
 
@@ -255,7 +364,7 @@ ul li img {
     height: 85vh;
 }
 
-   
+
 
 .right .liartist {
     font-size: 24px;
@@ -263,12 +372,12 @@ ul li img {
     letter-spacing: -1px;
 }
 
-.right a{
-text-decoration: none;
-font-size: 15px;
-color: #b3b3b3;
-font-weight: 600;
-letter-spacing: -1px;
+.right a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #b3b3b3;
+    font-weight: 600;
+    letter-spacing: -1px;
 }
 
 .option {
@@ -282,14 +391,18 @@ letter-spacing: -1px;
 
 
 
-.play{
+.play {
     height: 50px;
     width: 50px;
     background-color: rgb(0, 255, 0);
-    position: absolute; /* Ensure this is absolute */
-    top: 50%; /* Center vertically */
-    left: 80%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset the position */
+    position: absolute;
+    /* Ensure this is absolute */
+    top: 50%;
+    /* Center vertically */
+    left: 80%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Offset the position */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -299,18 +412,25 @@ letter-spacing: -1px;
     animation-duration: 2s;
 }
 
-.play img{
+.play img {
     height: 25px !important;
     width: 23px !important;
     box-shadow: none !important;
-    
+
 }
 
 
 @keyframes example {
-    0%   {margin-top: 30px;opacity: 1;}
-    100% {margin-top: 0px;opacity: 1;}
-  }
+    0% {
+        margin-top: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
 
 .artist {
     display: flex;
@@ -320,19 +440,7 @@ letter-spacing: -1px;
 
 }
 
-/* .artistcard {
-    height: 200px;
-    width: 134px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
 
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-} */
 
 .artistcard {
     height: 200px;
@@ -342,13 +450,14 @@ letter-spacing: -1px;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    position: relative; /* Add this */
+    /* position: relative; */
+    /* Add this */
 }
 
 
 .artistcard:hover {
     background-color: rgb(44 45 46 / 65%);
-    border-radius: 10px;    
+    border-radius: 10px;
 }
 
 
@@ -357,7 +466,7 @@ letter-spacing: -1px;
     height: 138px;
     width: 133px;
     box-shadow: 0px 1px 10px;
-    color: black; 
+    color: black;
 }
 
 
@@ -397,13 +506,13 @@ letter-spacing: -1px;
 
 }
 
-.option_album a{
+.option_album a {
     text-decoration: none;
     font-size: 15px;
     color: #b3b3b3;
     font-weight: 600;
     letter-spacing: -1px;
-    }
+}
 
 .albumcard {
     height: 200px;
@@ -418,7 +527,7 @@ letter-spacing: -1px;
     gap: 5px;
 }
 
-.albumcard img{
+.albumcard img {
     box-shadow: 0px 1px 10px;
     color: black;
 }
@@ -439,15 +548,14 @@ letter-spacing: -1px;
 }
 
 .albumcard:hover {
-        background-color: rgb(44 45 46 / 65%);
-        border-radius: 10px;    
+    background-color: rgb(44 45 46 / 65%);
+    border-radius: 10px;
 }
 
 /* footer */
 
 footer {
     margin-top: 90px;
-    margin-bottom: 60px;
 }
 
 .grid_cont {
@@ -495,7 +603,72 @@ footer .foo a {
 }
 
 .footer_spotify {
-    margin-top: 100px;
-    margin-bottom: 40px;
+    margin-top: 90px;
+    margin-bottom: 70px;
 
+}
+
+.player {
+    height: 8%;
+    width: 67%;
+    background-color: #121212;
+    top: 88%;
+    /* margin-top: 9px; */
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    position: fixed;
+    border-radius: 5px;
+    margin-left: 25px;
+}
+
+.playdur {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10%;
+}
+
+.audioControls{
+    display: flex;
+    gap: 13px;
+}
+
+.player img {
+    height: 30px;
+    cursor: pointer;
+}
+
+
+.dur {
+    /* padding-left: 189px; */
+    display: flex;
+
+}
+
+.progress-bar {
+    width: 95%;
+    height: 5px;
+    background-color: #ddd;
+    position: absolute;
+    bottom: 13px;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+
+.playdur span {
+    left: 0;
+}
+
+
+
+.circle {
+    background-color: #fff;
+    border-radius: 30px;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    bottom: 7px;
 }
